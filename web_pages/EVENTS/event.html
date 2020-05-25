@@ -1,0 +1,234 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<!--
+Design by TEMPLATED
+http://templated.co
+Released for free under the Creative Commons Attribution License
+
+Name       : FirstBase 
+Description: A two-column, fixed-width design with dark color scheme.
+Version    : 1.0
+Released   : 20140404
+
+-->
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Events</title>
+<meta name="keywords" content="" />
+<meta name="description" content="" />
+<link href="http://fonts.googleapis.com/css?family=Didact+Gothic" rel="stylesheet" />
+<link href="default.css" rel="stylesheet" type="text/css" media="all" />
+<link href="fonts.css" rel="stylesheet" type="text/css" media="all" />
+
+<!--[if IE 6]><link href="default_ie6.css" rel="stylesheet" type="text/css" /><![endif]-->
+
+</head>
+<body>
+<div id="header-wrapper">
+	<div id="header" class="container">
+
+		<div id="menu">
+			<ul>
+				<li><a href="index.html" accesskey="1" title=""><b>Homepage</b></a></li>
+				<li><a href="singer.html" accesskey="2" title=""><b>Singers</b></a></li>
+				<li class="active"><a href="event.html" accesskey="3" title=""><b>Events</b></a></li>
+				<li><a href="fan.html" accesskey="4" title=""><b>Fans</b></a></li>
+				<li><a href="datawarehouse.php" accesskey="5" title=""><b>Data Warehouse</b></a></li>
+			</ul>
+		</div>
+	</div>
+
+<div id="banner-wrapper">
+	<div id="banner" class="container">
+		<div class="title">
+			<h2>Gallery for Music Fans</h2>
+			<span class="byline">MPCS 53001 Final Project</span>
+		</div>
+	</div>
+</div>
+</div>
+<div id="wrapper">
+	<div id="three-column" class="container">
+    
+
+		<div class="boxA">
+			<div class="title">
+				<h3>Explore Events You Are Interested In</h3>
+			</div>
+			<p></p>
+			<form action="expEvent.php" method="POST">  
+				<div class="form-element">
+          <p>
+            <label for="event_name"><b>Event Name:</b></label> 
+            <input type="text" name="event_name" size="30" required/> </br>
+            <i> (e.g. WHO-260, 8JZD936)</i> </br>
+            <input class = "button button-alt" type="submit" value="Search" align="middle"/>
+            <input class = "button button-alt" type="reset" value="Clear and Restart"/>
+          </p>	
+        </div> 
+    		</form>
+        </br>
+
+      <div class="title">
+        <h3>Find Events Your Favorite Singer Attended</h3>
+      </div>
+      <p></p>
+      <form action="singerEvent.php" method="POST">  
+        <div class="form-element">
+          <p>
+            <label for="singer_name"><b>Singer Name:</b></label> 
+            <input type="text" name="singer_name" size="30" required/> </br>
+            <i> (e.g. Alisha Meza, Kristen Turner)</i> </br>
+            <input class = "button button-alt" type="submit" value="Search" align="middle"/>
+            <input class = "button button-alt" type="reset" value="Clear and Restart"/>
+          </p>  
+        </div> 
+        </form>
+		</div>
+
+
+
+		<div class="boxB">
+			<div class="title">
+				<h3>Add New Events</h3> 
+			</div>
+			<p></p>
+			<form action="addConcert.php" method="POST"> 
+				<div class="form-element">
+        <h4>Add Events by Category:</h4>
+        <h4>1. If you want to add events which are <i>Concert</i>:</h4>
+          <p>
+            <label for="concert_name"><b>Concert Name:</b></label> 
+            <input type="text" name="concert_name" size="30" required/> </br>
+            <label for="concert_date"><b>Concert Date:</b></label> 
+            <input type="date" name="concert_date" required/> </br>
+            <label for="attendance"><b>Attendance:</b></label> 
+            <input type="text" name="attendance" size="30" /> </br>
+            <i> (You can leave this blank.)</i> </br>
+            <input class = "button button-alt" type="submit" value="Add" align="middle"/>
+            <input class = "button button-alt" type="reset" value="Clear and Restart"/>
+          </p>  	
+        </div>
+			</form> 
+
+      <form action="addMF.php" method="POST"> 
+        <div class="form-element">
+        <h4>2. If you want to add events which are <i>Music Festival</i>:</h4>
+          <p>
+            <label for="MF_name"><b>Festival Name:</b></label> 
+            <input type="text" name="MF_name" size="30" required/> </br>
+            <label for="MF_date"><b>Festival Date:</b></label> 
+            <input type="date" name="MF_date" required/> </br>
+            <!-- <i> (e.g. )</i> </br> -->
+            <label for="genre"><b>Genre:</b></label> 
+              <select name="genre">
+                <option value="None"></option>
+                <option value="Electronic">Electronic</option>
+                <option value="Jazz">Jazz</option>
+                <option value="Folk Rock">Folk Rock</option>
+                <option value="Various">Various</option>
+                <option value="Others">Others</option>
+              </select> </br>
+            <i> (You can leave this blank.)</i> </br>
+            <label for="scale"><b>Scale:</b></label> 
+              <select name="scale">
+                <option value="None"></option>
+                <option value="small">Small</option>
+                <option value="medium">Medium</option>
+                <option value="large">Large</option>
+                <option value="unknown">Unknown</option>
+              </select> </br>
+            <i> (You can leave this blank.)</i> </br>
+            <input class = "button button-alt" type="submit" value="Add" align="middle"/>
+            <input class = "button button-alt" type="reset" value="Clear and Restart"/>
+          </p>          
+        </div>
+      </form> 
+
+      <form action="addotherEvent.php" method="POST"> 
+        <div class="form-element">
+        <h4>3. If you want to add other events:</h4>
+          <p>
+            <label for="event_name"><b>Event Name:</b></label> 
+            <input type="text" name="event_name" size="30" required/> </br>
+            <label for="event_date"><b>Event Date:</b></label> 
+            <input type="date" name="event_date" required/> </br>
+            <label for="country"><b>Country:</b></label> 
+            <input type="text" name="country" size="30"/> </br>
+            <i> (You can leave this blank.)</i> </br>
+            <label for="city"><b>City:</b></label> 
+            <input type="text" name="city" size="30"/> </br>
+            <i> (You can leave this blank.)</i> </br>
+            <input class = "button button-alt" type="submit" value="Add" align="middle"/>
+            <input class = "button button-alt" type="reset" value="Clear and Restart"/>
+          </p>          
+        </div>
+      </form> 
+
+			
+		</div>
+
+		
+		<div class="boxC">
+			<div class="title">
+			<h3>Update Info for Existing Events</h3>
+			</div>
+			<p></p>
+			<form action="updateEvent.php" method="POST">  
+				<div class="form-element">
+          <h5>Before updating, you need to find event name and event date. 
+              These are available under section <i>Explore Events You Are Interested In</i>.</h5>
+          <p>
+            <label for="event_name"><b>Event Name:</b></label> 
+            <input type="text" name="event_name" size="30" required/> </br>
+            <label for="event_date"><b>Event Date:</b></label> 
+            <input type="date" name="event_date" required/> </br>
+            <i>(e.g. Event Name: WHO-260, </br> Event Date: 1987-08-28)</i> </br>
+            <label for="country"><b>Country:</b></label> 
+            <input type="text" name="country" size="30"/> </br>
+            <i> (You can leave this blank.)</i> </br>
+            <label for="city"><b>City:</b></label> 
+            <input type="text" name="city" size="30"/> </br>
+            <i> (You can leave this blank.)</i> </br>
+            <input class = "button button-alt" type="submit" value="Update" align="middle"/>
+            <input class = "button button-alt" type="reset" value="Clear and Restart"/>
+          </p>     
+				
+      </div>
+    	</form>	
+      </br>
+      </br>
+
+      <!-- <div class="title">
+      <h3>Delete Events</h3>
+      </div>
+      <p></p> -->
+      <!-- <form action="deleteEvent.php" method="POST">  
+        <div class="form-element">
+          <h5>Before deleting, you need to find event name and event date. 
+              These are available in section <i>Explore Events You Are Interested In</i>. </br>
+              Or you can add a new event in section <i>Add New Events</i> and then try to delete it. 
+          </h5>
+          <p>
+            <label for="event_name"><b>Event Name:</b></label> 
+            <input type="text" name="event_name" size="30" required/> </br>
+            <label for="event_date"><b>Event Date:</b></label> 
+            <input type="date" name="event_date" required/> </br>
+            <i>(e.g. Event Name: WHO-260, </br> Event Date: 1987-08-28; </br> or any other new events you just added.)</i> </br>
+            <input class = "button button-alt" type="submit" value="Delete" align="middle"/>
+            <input class = "button button-alt" type="reset" value="Clear and Restart"/>
+          </p>     
+        
+      </div>
+      </form>   	 -->
+
+    		
+	  </div>
+  </div>
+</div>
+
+<div id="copyright" class="container">
+	<p>Created by Shuting Chen | Photo by <a href="https://www.healingfrequenciesmusic.com/what-box-are-you-in/abstract-music-logo-music-wallpapers-hd1/">Music!</a> | Design by <a href="http://templated.co" rel="nofollow">TEMPLATED</a>.</p>
+</div>
+</body>
+</html>

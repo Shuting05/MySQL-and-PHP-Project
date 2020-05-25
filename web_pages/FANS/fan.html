@@ -1,0 +1,106 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<!--
+Design by TEMPLATED
+http://templated.co
+Released for free under the Creative Commons Attribution License
+
+Name       : FirstBase 
+Description: A two-column, fixed-width design with dark color scheme.
+Version    : 1.0
+Released   : 20140404
+
+-->
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Fans</title>
+<meta name="keywords" content="" />
+<meta name="description" content="" />
+<link href="http://fonts.googleapis.com/css?family=Didact+Gothic" rel="stylesheet" />
+<link href="default.css" rel="stylesheet" type="text/css" media="all" />
+<link href="fonts.css" rel="stylesheet" type="text/css" media="all" />
+
+<!--[if IE 6]><link href="default_ie6.css" rel="stylesheet" type="text/css" /><![endif]-->
+
+</head>
+
+<body>
+<div id="header-wrapper">
+	<div id="header" class="container">
+		
+		<div id="menu">
+			<ul>
+				<li><a href="index.html" accesskey="1" title=""><b>Homepage</b></a></li>
+				<li><a href="singer.html" accesskey="2" title=""><b>Singers</b></a></li>
+				<li><a href="event.html" accesskey="3" title=""><b>Events</b></a></li>
+				<li class="active"><a href="fan.html" accesskey="4" title=""><b>Fans</b></a></li>
+				<li><a href="datawarehouse.php" accesskey="5" title=""><b>Data Warehouse</b></a></li>
+			</ul>
+		</div>
+	</div>
+
+<div id="banner-wrapper">
+	<div id="banner" class="container">
+		<div class="title">
+			<h2>Gallery for Music Fans</h2>
+			<span class="byline">MPCS 53001 Final Project</span>
+		</div>
+	</div>
+</div>
+</div>
+
+<div id="wrapper">
+	<div id="three-column" class="container">
+    
+		<div class="tbox1">
+			<div class="title">
+				<h3>Quick Links</h3>
+			</div>
+			<p><a href="activeUser.php">View all active users who have uploaded more than three links here!</a></p>
+			<p><a href="FsingerFan.php">View all fans who have uploaded links for events that their favorite singers attended here!</a></p>
+		</div>
+
+
+
+		<div class="tbox2">
+			<div class="title">
+				<h3>Register</h3> 
+			</div>
+			<p></p>
+			<form action="addFan.php" method="POST">
+  				<div class="form-element">
+    			<label for="fan_name"><b>Your Name:</b></label>
+    			<input type="text" name="fan_name" size="30" required/> </br>
+    			<label for="birth_date"><b>Date of Birth:</b></label>
+    			<input type="date" name="birth_date" required/></br>
+    			<label for="region"><b>Region:</b></label> 
+          			<select name="region">
+          			<option value="Europe">Europe</option>
+         			<option value="Asia">Asia</option>
+          			<option value="North America">North America</option>
+          			<option value="South America">South America</option>
+          			<option value="Oceania">Oceania</option>
+          			<option value="Africa">Africa</option>
+          			</select></br>
+    			<input class = "button button-alt" type="submit" value="Register" align="middle"/>
+                <input class = "button button-alt" type="reset" value="Clear and Restart"/>
+  				</div>
+			</form>
+			
+				
+        </div>
+			
+
+			
+	</div>
+
+		
+    		
+</div>
+  
+
+<div id="copyright" class="container">
+	<p>Created by Shuting Chen | Photo by <a href="https://www.healingfrequenciesmusic.com/what-box-are-you-in/abstract-music-logo-music-wallpapers-hd1/">Music!</a> | Design by <a href="http://templated.co" rel="nofollow">TEMPLATED</a>.</p>
+</div>
+</body>
+</html>

@@ -1,0 +1,211 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<!--
+Design by TEMPLATED
+http://templated.co
+Released for free under the Creative Commons Attribution License
+
+Name       : FirstBase 
+Description: A two-column, fixed-width design with dark color scheme.
+Version    : 1.0
+Released   : 20140404
+
+-->
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Singers</title>
+<meta name="keywords" content="" />
+<meta name="description" content="" />
+<link href="http://fonts.googleapis.com/css?family=Didact+Gothic" rel="stylesheet" />
+<link href="default.css" rel="stylesheet" type="text/css" media="all" />
+<link href="fonts.css" rel="stylesheet" type="text/css" media="all" />
+
+<!--[if IE 6]><link href="default_ie6.css" rel="stylesheet" type="text/css" /><![endif]-->
+
+</head>
+<body>
+<div id="header-wrapper">
+	<div id="header" class="container">
+
+		<div id="menu">
+			<ul>
+				<li><a href="index.html" accesskey="1" title=""><b>Homepage</b></a></li>
+				<li class="active"><a href="singer.html" accesskey="2" title=""><b>Singers</b></a></li>
+				<li><a href="event.html" accesskey="3" title=""><b>Events</b></a></li>
+				<li><a href="event.html" accesskey="4" title=""><b>Fans</b></a></li>
+				<li><a href="datawarehouse.php" accesskey="5" title=""><b>Data Warehouse</b></a></li>
+			</ul>
+		</div>
+	</div>
+
+<div id="banner-wrapper">
+	<div id="banner" class="container">
+		<div class="title">
+			<h2>Gallery for Music Fans</h2>
+			<span class="byline">MPCS 53001 Final Project</span>
+		</div>
+		
+	</div>
+</div>
+</div>
+<div id="wrapper">
+	<div id="three-column" class="container">
+    
+		<div class="boxA">
+			<div class="title">
+				<h3>Find Singers by Start-Year and Region</h3>
+			</div>
+			<p></p>
+			<form action="yearRegion.php" method="POST">  
+				<div class="form-element">
+				<p>
+        		<label for="start_year"><b>Start Year:</b></label> 
+        		<input type="text" name="start_year" size="30" required/> </br>
+        		<i> (e.g. 1993, 2010)</i> </br>
+        		<label for="region"><b>Region:</b></label> 
+          			<select name="region">
+          			<option value="Europe">Europe</option>
+         			<option value="Asia">Asia</option>
+          			<option value="North America">North America</option>
+          			<option value="South America">South America</option>
+          			<option value="Oceania">Oceania</option>
+          			<option value="Africa">Africa</option>
+          			</select></br>
+          		<i> Please note that valid years are four-digit numbers 1900-2018.</i> </br>
+        		<input class = "button button-alt" type="submit" value="Search" align="middle"/>
+        		<input class = "button button-alt" type="reset" value="Clear and Restart"/>
+        		</p>
+        		</div> 
+    		</form>
+		</div>
+
+
+
+		<div class="boxB">
+			<div class="title">
+				<h3>Explore Singers You Are Interested In</h3> 
+			</div>
+			<p></p>
+			<form action="ExpSinger.php" method="POST"> 
+				<div class="form-element">
+				<p>
+        		<label for="singer_name"><b>Singer Name:</b></label> 
+        		<input type="text" name="singer_name" size="30" required/> </br>
+        		<i> (e.g. Alisha Meza, Kristen Turner)</i> </br>
+        		<input class = "button button-alt" type="submit" value="Search" align="middle"/>
+        		<input class = "button button-alt" type="reset" value="Clear and Restart"/>
+        	    </p>
+        	    </div>
+			</form> 
+
+			<form action="addSinger.php" method="POST">
+				<div class="form-element">
+				<h4>Not find singers you are interested in? </br> You can add them by yourself! </h4>
+        	    <p>
+        		<label for="add_singer_name"><b>Singer Name:</b></label> 
+        		<input type="text" name="add_singer_name" size="30" required/> </br>
+        		<i> (e.g. Susan Cook)</i> </br>
+        		<label for="start_year"><b>Start Year:</b></label> 
+        		<input type="text" name="start_year" size="30" /> </br>
+        		<i> (Please enter four-digit numbers 1900-2018. </br> You can leave this blank.)</i> </br>
+        		<label for="birth_date"><b>Date of Birth:</b></label> 
+        		<input type="date" name="birth_date" /> </br>
+        		<i> (You can leave this unchanged.)</i> </br>
+        		<label for="add_region"><b>Region:</b></label> 
+        			<select name="add_region">
+        			<option value="None"></option>
+          			<option value="Europe">Europe</option>
+         			<option value="Asia">Asia</option>
+          			<option value="North America">North America</option>
+          			<option value="South America">South America</option>
+          			<option value="Oceania">Oceania</option>
+          			<option value="Africa">Africa</option>
+          			</select> </br>
+          			<i> (You can leave this blank.)</i> </br>
+        		<input class = "button button-alt" type="submit" value="Add" align="middle"/>
+        		<input class = "button button-alt" type="reset" value="Clear and Restart"/>
+        	    </p>
+        	</div>
+			</form>
+		</div>
+
+		
+		<div class="boxC">
+			<div class="title">
+				<h3>Modify Information for Singers and Their Songs</h3>
+			</div>
+			<p></p>
+			<form action="modifySingerSong.php" method="POST">  
+				<div class="form-element">
+				<h4>1. Update info for existing singers:</h4>
+				<h5>Before updating, you need to find singer ID for the singer. </br>
+					Singer ID is available when you search the singer in panel <i>Explore Singer(s) You Are Interested In</i>. </br>Then you can update!</h5>
+				<p>
+        		<label for="update_singer_id"><b>Singer ID:</b></label> 
+        		<input type="text" name="update_singer_id" size="30" required/> </br>
+        		<i>(You must provide singer ID.)</i> </br>
+        		<label for="start_year"><b>Start Year:</b></label> 
+        		<input type="text" name="start_year" size="30" /> </br>
+        		<i> (Please enter four-digit numbers 1900-2018. </br> You can leave this blank.)</i> </br>
+        		<label for="birth_date"><b>Date of Birth:</b></label> 
+        		<input type="date" name="birth_date" /> </br>
+        		<i> (You can leave this unchanged.)</i> </br>
+        		<label for="update_region"><b>Region:</b></label> 
+        			<select name="update_region">
+        			<option value="None"></option>
+          			<option value="Europe">Europe</option>
+         			<option value="Asia">Asia</option>
+          			<option value="North America">North America</option>
+          			<option value="South America">South America</option>
+          			<option value="Oceania">Oceania</option>
+          			<option value="Africa">Africa</option>
+          			</select> </br>
+          			<i> (You can leave this blank.)</i> </br>
+        		<input class = "button button-alt" type="submit" value="Update" align="middle"/>
+        		<input class = "button button-alt" type="reset" value="Clear and Restart"/>
+        	    </p>
+        	    </div>
+    		</form>		
+
+    		<form action="addSong.php" method="POST">  
+				<div class="form-element">
+				<h4>2. Add new songs to existing singers:</h4>
+				<h5>Again, you need to find singer ID for the singer before adding new songs. </br>
+					Singer ID is available when you search the singer in panel <i>Explore Singer(s) You Are Interested In</i>.</h5>
+				<p>
+        		<label for="singer_id"><b>Singer ID:</b></label> 
+        		<input type="text" name="singer_id" size="30" required/> </br>
+        		<i>(You must provide singer ID.)</i> </br>
+        		<label for="song_name"><b>Song Name:</b></label> 
+        		<input type="text" name="song_name" size="30" required/> </br>
+        		<label for="year_released"><b>Year Released:</b></label> 
+        		<input type="text" name="year_released" size="30" /> </br>
+        		<i> (Please enter four-digit numbers 1900-2018. </br> You can leave this blank.)</i> </br>
+        		<label for="genre"><b>Genre:</b></label> 
+        			<select name="genre">
+        			<option value="None"></option>
+          			<option value="hip hop">hip hop</option>
+         			<option value="pop">pop</option>
+          			<option value="rock">rock</option>
+          			<option value="dance-punk">dance-punk</option>
+          			<option value="K-pop">K-pop</option>
+          			<option value="electropop">electropop</option>
+          			<option value="synth-pop">synth-pop</option>
+          			<option value="jazz">jazz</option>
+          			<option value="others">others</option>
+          			</select> </br>
+          			<i> (You can leave this blank.)</i> </br>
+        		<input class = "button button-alt" type="submit" value="Add" align="middle"/>
+        		<input class = "button button-alt" type="reset" value="Clear and Restart"/>
+        	    </p>
+        	    </div>
+    		</form>		
+	</div>
+</div>
+</div>
+
+<div id="copyright" class="container">
+	<p>Created by Shuting Chen | Photo by <a href="https://www.healingfrequenciesmusic.com/what-box-are-you-in/abstract-music-logo-music-wallpapers-hd1/">Music!</a> | Design by <a href="http://templated.co" rel="nofollow">TEMPLATED</a>.</p>
+</div>
+</body>
+</html>
